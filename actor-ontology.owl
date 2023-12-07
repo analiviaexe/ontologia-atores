@@ -1,99 +1,468 @@
 <?xml version="1.0"?>
-<!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-]>
-
 <rdf:RDF xmlns="http://www.semanticweb.org/actor-ontology#"
      xml:base="http://www.semanticweb.org/actor-ontology"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ont="http://www.co-ode.org/ontologies/ont.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology/>
+    
 
-  <!-- Classes -->
-  <owl:Class rdf:about="#Ator"/>
-  <owl:Class rdf:about="#Carreira"/>
-  <owl:Class rdf:about="#Personagem"/>
-  <owl:Class rdf:about="#Diretor"/>
-  <owl:Class rdf:about="#Premiacao"/>
-  <owl:Class rdf:about="#EstiloAtuacao"/>
-  <owl:Class rdf:about="#Filme"/>
-  <owl:Class rdf:about="#CategoriaPremiacao"/>
 
-  <!-- Propriedades de Objeto -->
-  <owl:ObjectProperty rdf:about="#atuouEm"/>
-  <owl:ObjectProperty rdf:about="#interpretouPersonagem"/>
-  <owl:ObjectProperty rdf:about="#recebeuPremiacao"/>
-  <owl:ObjectProperty rdf:about="#colaborouCom"/>
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-  <!-- Propriedades de Dados -->
-  <owl:DatatypeProperty rdf:about="#nome"/>
-  <owl:DatatypeProperty rdf:about="#dataNascimento"/>
-  <owl:DatatypeProperty rdf:about="#nacionalidade"/>
-  <owl:DatatypeProperty rdf:about="#nomePersonagem"/>
-  <owl:DatatypeProperty rdf:about="#generoPersonagem"/>
-  <owl:DatatypeProperty rdf:about="#anoInterpretacao"/>
-  <owl:DatatypeProperty rdf:about="#nomePremiacao"/>
-  <owl:DatatypeProperty rdf:about="#anoPremiacao"/>
+    
 
-  <!-- Indivíduos -->
-  <owl:NamedIndividual rdf:about="#TomHanks"/>
-  <owl:NamedIndividual rdf:about="#ForrestGump"/>
-  <owl:NamedIndividual rdf:about="#MelhorAtor"/>
 
-  <!-- Axiomas -->
-  <rdf:Description rdf:about="#TomHanks">
-    <rdf:type rdf:resource="#Ator"/>
-    <nome rdf:datatype="&xsd;string">Tom Hanks</nome>
-    <dataNascimento rdf:datatype="&xsd;date">1956-07-09</dataNascimento>
-    <nacionalidade rdf:datatype="&xsd;string">Americano</nacionalidade>
-    <atuouEm rdf:resource="#ForrestGump"/>
-    <recebeuPremiacao rdf:resource="#MelhorAtor"/>
-  </rdf:Description>
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
 
-  <rdf:Description rdf:about="#ForrestGump">
-    <rdf:type rdf:resource="#Filme"/>
-    <nome rdf:datatype="&xsd;string">Forrest Gump</nome>
-  </rdf:Description>
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
 
-  <rdf:Description rdf:about="#MelhorAtor">
-    <rdf:type rdf:resource="#CategoriaPremiacao"/>
-    <nome rdf:datatype="&xsd;string">Melhor Ator</nome>
-  </rdf:Description>
 
-  <!-- Restrição de Propriedade -->
-  <owl:Restriction>
-    <owl:onProperty rdf:resource="#anoPremiacao"/>
-    <owl:someValuesFrom rdf:resource="&xsd;gYear"/>
-  </owl:Restriction>
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-  <!-- Hierarquia de classes -->
-  <rdf:Description rdf:about="#Carreira">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdf:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
+    
 
-  <!-- Hierarquia de propriedades -->
-  <rdf:Description rdf:about="#atuouEm">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
 
-  <!-- Domínios e intervalos -->
-  <rdf:Description rdf:about="#atuouEm">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:domain rdf:resource="#Ator"/>
-    <rdf:range rdf:resource="#Filme"/>
-  </rdf:Description>
+    <!-- http://www.co-ode.org/ontologies/ont.owl#apareceEm -->
 
-  <rdf:Description rdf:about="#nome">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdf:domain rdf:resource="#Ator"/>
-    <rdf:range rdf:resource="&xsd;string"/>
-  </rdf:Description>
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#apareceEm"/>
+    
 
-  <!-- Outras relações e propriedades podem ser definidas da mesma maneira -->
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#fezCarreiraEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#fezCarreiraEm"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#interpretadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#interpretadoPor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/actor-ontology#interpretouPersonagem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#atuouEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/actor-ontology#atuouEm"/>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#interpretouPersonagem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/actor-ontology#interpretouPersonagem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#recebeuPremiacao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/actor-ontology#recebeuPremiacao"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#academia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#academia"/>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#anoInterpretacao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/actor-ontology#anoInterpretacao"/>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#dataNascimento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/actor-ontology#dataNascimento"/>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#generoPersonagem -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/actor-ontology#generoPersonagem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#nacionalidade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/actor-ontology#nacionalidade"/>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/actor-ontology#nome"/>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#nomePersonagem -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/actor-ontology#nomePersonagem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#nomePremiacao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/actor-ontology#nomePremiacao"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#Ator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/actor-ontology#Ator"/>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#Carreira -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/actor-ontology#Carreira"/>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#CategoriaPremiacao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/actor-ontology#CategoriaPremiacao"/>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#Filme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/actor-ontology#Filme"/>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#Personagem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/actor-ontology#Personagem"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Bollywood -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Bollywood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Carreira"/>
+        <nome>Bollywood</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Chinawood -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Chinawood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Carreira"/>
+        <nome>Chinawood</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CliffBooth -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#CliffBooth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Personagem"/>
+        <ont:apareceEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#EraUmaVezHollywood"/>
+        <ont:interpretadoPor rdf:resource="http://www.semanticweb.org/actor-ontology#BradPitt"/>
+        <anoInterpretacao rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</anoInterpretacao>
+        <generoPersonagem>Comédia Dramatica</generoPersonagem>
+        <nome>Cliff Booth</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ClubeDaLuta -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#ClubeDaLuta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Filme"/>
+        <nome>Clube da Luta</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#EraUmaVezHollywood -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#EraUmaVezHollywood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Filme"/>
+        <nome>Era uma vez... Hollywood</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ForrestGump -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#ForrestGump">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Personagem"/>
+        <ont:apareceEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ForrestGump"/>
+        <ont:interpretadoPor rdf:resource="http://www.semanticweb.org/actor-ontology#TomHanks"/>
+        <anoInterpretacao rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1994</anoInterpretacao>
+        <generoPersonagem>Drama</generoPersonagem>
+        <nomePersonagem>Forrest Gump</nomePersonagem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Hollywood -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Hollywood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Carreira"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#JogosVorazes -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#JogosVorazes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Filme"/>
+        <nome>Jogos Vorazes</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#KatnissEverdeen -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#KatnissEverdeen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Personagem"/>
+        <ont:apareceEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#JogosVorazes"/>
+        <ont:interpretadoPor rdf:resource="http://www.semanticweb.org/actor-ontology#JenniferLawrence"/>
+        <anoInterpretacao rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012</anoInterpretacao>
+        <generoPersonagem>Distopia</generoPersonagem>
+        <nomePersonagem>Katniss Everdeen</nomePersonagem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MelhorAtrizCoadjuvante -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#MelhorAtrizCoadjuvante">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#CategoriaPremiacao"/>
+        <ont:academia>Oscar</ont:academia>
+        <nomePremiacao>Melhor Atriz Coadjuvante</nomePremiacao>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MirandaPriestly -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#MirandaPriestly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Personagem"/>
+        <ont:apareceEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ODiaboVestePrada"/>
+        <ont:interpretadoPor rdf:resource="http://www.semanticweb.org/actor-ontology#MerylStreep"/>
+        <anoInterpretacao rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006</anoInterpretacao>
+        <generoPersonagem>Drama</generoPersonagem>
+        <nomePersonagem>Miranda Priestly</nomePersonagem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Nollywood -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Nollywood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Carreira"/>
+        <nome>Nollywood</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ODiaboVestePrada -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#ODiaboVestePrada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Filme"/>
+        <nome>O Diabo Veste Prada</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RickDalton -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#RickDalton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Personagem"/>
+        <ont:apareceEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#EraUmaVezHollywood"/>
+        <ont:interpretadoPor rdf:resource="http://www.semanticweb.org/actor-ontology#LeonardoDiCaprio"/>
+        <anoInterpretacao rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</anoInterpretacao>
+        <generoPersonagem>Comédia Dramática</generoPersonagem>
+        <nome>Rick Dalton</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#TylerDurden -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#TylerDurden">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Personagem"/>
+        <ont:apareceEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ClubeDaLuta"/>
+        <ont:interpretadoPor rdf:resource="http://www.semanticweb.org/actor-ontology#BradPitt"/>
+        <anoInterpretacao rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1999</anoInterpretacao>
+        <generoPersonagem>Ação</generoPersonagem>
+        <nomePersonagem>Tyler Durden</nomePersonagem>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#BradPitt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#BradPitt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Ator"/>
+        <ont:fezCarreiraEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hollywood"/>
+        <atuouEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#EraUmaVezHollywood"/>
+        <interpretouPersonagem rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CliffBooth"/>
+        <interpretouPersonagem rdf:resource="http://www.co-ode.org/ontologies/ont.owl#TylerDurden"/>
+        <recebeuPremiacao rdf:resource="http://www.semanticweb.org/actor-ontology#MelhorAtorCoadjuvante"/>
+        <dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1963-12-18</dataNascimento>
+        <nacionalidade>Americano</nacionalidade>
+        <nome>Brad Pitt</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#ForrestGump -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#ForrestGump">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Filme"/>
+        <nome>Forrest Gump</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#JenniferLawrence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#JenniferLawrence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Ator"/>
+        <ont:fezCarreiraEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hollywood"/>
+        <atuouEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#JogosVorazes"/>
+        <interpretouPersonagem rdf:resource="http://www.co-ode.org/ontologies/ont.owl#KatnissEverdeen"/>
+        <recebeuPremiacao rdf:resource="http://www.semanticweb.org/actor-ontology#MelhorAtriz"/>
+        <dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-08-15</dataNascimento>
+        <nacionalidade>Americana</nacionalidade>
+        <nome>Jennifer Lawrence</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#LeonardoDiCaprio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#LeonardoDiCaprio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Ator"/>
+        <ont:fezCarreiraEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hollywood"/>
+        <atuouEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#EraUmaVezHollywood"/>
+        <interpretouPersonagem rdf:resource="http://www.co-ode.org/ontologies/ont.owl#RickDalton"/>
+        <recebeuPremiacao rdf:resource="http://www.semanticweb.org/actor-ontology#MelhorAtor"/>
+        <dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1974-11-11</dataNascimento>
+        <nacionalidade>Americano</nacionalidade>
+        <nome>Leonardo DiCaprio</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#MelhorAtor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#MelhorAtor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#CategoriaPremiacao"/>
+        <ont:academia>Oscar</ont:academia>
+        <nome>Melhor Ator</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#MelhorAtorCoadjuvante -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#MelhorAtorCoadjuvante">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#CategoriaPremiacao"/>
+        <ont:academia>Oscar</ont:academia>
+        <nome>Melhor Ator Coadjuvante</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#MelhorAtriz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#MelhorAtriz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#CategoriaPremiacao"/>
+        <ont:academia>Oscar</ont:academia>
+        <nome>Melhor Atriz</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#MerylStreep -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#MerylStreep">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Ator"/>
+        <ont:fezCarreiraEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hollywood"/>
+        <atuouEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ODiaboVestePrada"/>
+        <interpretouPersonagem rdf:resource="http://www.co-ode.org/ontologies/ont.owl#MirandaPriestly"/>
+        <recebeuPremiacao rdf:resource="http://www.co-ode.org/ontologies/ont.owl#MelhorAtrizCoadjuvante"/>
+        <recebeuPremiacao rdf:resource="http://www.semanticweb.org/actor-ontology#MelhorAtriz"/>
+        <dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1949-06-22</dataNascimento>
+        <nacionalidade>Americana</nacionalidade>
+        <nome>Meryl Streep</nome>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/actor-ontology#TomHanks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#TomHanks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Ator"/>
+        <ont:fezCarreiraEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hollywood"/>
+        <atuouEm rdf:resource="http://www.semanticweb.org/actor-ontology#ForrestGump"/>
+        <interpretouPersonagem rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ForrestGump"/>
+        <recebeuPremiacao rdf:resource="http://www.semanticweb.org/actor-ontology#MelhorAtor"/>
+        <dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1956-07-09</dataNascimento>
+        <nacionalidade>Americano</nacionalidade>
+        <nome>Tom Hanks</nome>
+    </owl:NamedIndividual>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

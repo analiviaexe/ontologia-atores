@@ -1,6 +1,7 @@
 # Ontologia de Atores
 
-Esta ontologia foi desenvolvida para representar informações relacionadas a atores, suas carreiras, personagens interpretados, prêmios recebidos e colaborações com diretores. Utilizando a linguagem OWL2, a ontologia oferece uma estrutura para representar informações sobre atores e suas atividades na indústria do entretenimento. A seguir, são apresentados os principais elementos da ontologia:
+Esta ontologia foi desenvolvida para representar informações relacionadas a atores e suas carreiras, personagens interpretados, prêmios recebidos e colaborações com diretores. Connect the Stars é um jogo online no qual o jogador deve estabelecer uma ligação entre duas estrelas de cinema através de suas colaborações em filmes. O formato do jogo, por sua vez, é bastante semelhante ao de um grafo, o que inspirou o presente trabalho.
+Utilizando a linguagem OWL2, essa ontologia oferece uma estrutura para representar informações sobre atores e suas atividades na indústria do entretenimento.
 
 ## Classes:
 
