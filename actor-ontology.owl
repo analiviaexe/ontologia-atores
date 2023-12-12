@@ -1,480 +1,971 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/actor-ontology#"
-     xml:base="http://www.semanticweb.org/actor-ontology"
-     xmlns:ont="http://www.co-ode.org/ontologies/ont.owl#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://example.com/ontologies/actors-ontology"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#date -->
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#apareceEm -->
-
-    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#apareceEm">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/actor-ontology#Ator"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#fezCarreiraEm -->
-
-    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#fezCarreiraEm"/>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#interpretadoPor -->
-
-    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#interpretadoPor">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/actor-ontology#interpretouPersonagem"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/actor-ontology#Personagem"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#atuouEm -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/actor-ontology#atuouEm">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/actor-ontology#Ator"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#interpretouPersonagem -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/actor-ontology#interpretouPersonagem">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/actor-ontology#Ator"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#recebeuPremiacao -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/actor-ontology#recebeuPremiacao"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#academia -->
-
-    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#academia"/>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#anoInterpretacao -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/actor-ontology#anoInterpretacao"/>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#dataNascimento -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/actor-ontology#dataNascimento">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#generoPersonagem -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/actor-ontology#generoPersonagem"/>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#nacionalidade -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/actor-ontology#nacionalidade"/>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#nome -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/actor-ontology#nome"/>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#nomePersonagem -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/actor-ontology#nomePersonagem"/>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#nomePremiacao -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/actor-ontology#nomePremiacao"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#Ator -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/actor-ontology#Ator"/>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#Carreira -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/actor-ontology#Carreira"/>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#CategoriaPremiacao -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/actor-ontology#CategoriaPremiacao"/>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#Filme -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/actor-ontology#Filme"/>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#Personagem -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/actor-ontology#Personagem"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#Bollywood -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Bollywood">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Carreira"/>
-        <nome>Bollywood</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#Chinawood -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Chinawood">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Carreira"/>
-        <nome>Chinawood</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#CliffBooth -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#CliffBooth">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Personagem"/>
-        <ont:apareceEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#EraUmaVezHollywood"/>
-        <ont:interpretadoPor rdf:resource="http://www.semanticweb.org/actor-ontology#BradPitt"/>
-        <anoInterpretacao rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</anoInterpretacao>
-        <generoPersonagem>Comédia Dramatica</generoPersonagem>
-        <nome>Cliff Booth</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#ClubeDaLuta -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#ClubeDaLuta">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Filme"/>
-        <nome>Clube da Luta</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#EraUmaVezHollywood -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#EraUmaVezHollywood">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Filme"/>
-        <nome>Era uma vez... Hollywood</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#ForrestGump -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#ForrestGump">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Personagem"/>
-        <ont:apareceEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ForrestGump"/>
-        <ont:interpretadoPor rdf:resource="http://www.semanticweb.org/actor-ontology#TomHanks"/>
-        <anoInterpretacao rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1994</anoInterpretacao>
-        <generoPersonagem>Drama</generoPersonagem>
-        <nomePersonagem>Forrest Gump</nomePersonagem>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#Hollywood -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Hollywood">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Carreira"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#JogosVorazes -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#JogosVorazes">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Filme"/>
-        <nome>Jogos Vorazes</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#KatnissEverdeen -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#KatnissEverdeen">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Personagem"/>
-        <ont:apareceEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#JogosVorazes"/>
-        <ont:interpretadoPor rdf:resource="http://www.semanticweb.org/actor-ontology#JenniferLawrence"/>
-        <anoInterpretacao rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012</anoInterpretacao>
-        <generoPersonagem>Distopia</generoPersonagem>
-        <nomePersonagem>Katniss Everdeen</nomePersonagem>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#MelhorAtrizCoadjuvante -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#MelhorAtrizCoadjuvante">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#CategoriaPremiacao"/>
-        <ont:academia>Oscar</ont:academia>
-        <nomePremiacao>Melhor Atriz Coadjuvante</nomePremiacao>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#MirandaPriestly -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#MirandaPriestly">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Personagem"/>
-        <ont:apareceEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ODiaboVestePrada"/>
-        <ont:interpretadoPor rdf:resource="http://www.semanticweb.org/actor-ontology#MerylStreep"/>
-        <anoInterpretacao rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006</anoInterpretacao>
-        <generoPersonagem>Drama</generoPersonagem>
-        <nomePersonagem>Miranda Priestly</nomePersonagem>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#Nollywood -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Nollywood">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Carreira"/>
-        <nome>Nollywood</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#ODiaboVestePrada -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#ODiaboVestePrada">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Filme"/>
-        <nome>O Diabo Veste Prada</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#RickDalton -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#RickDalton">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Personagem"/>
-        <ont:apareceEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#EraUmaVezHollywood"/>
-        <ont:interpretadoPor rdf:resource="http://www.semanticweb.org/actor-ontology#LeonardoDiCaprio"/>
-        <anoInterpretacao rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</anoInterpretacao>
-        <generoPersonagem>Comédia Dramática</generoPersonagem>
-        <nome>Rick Dalton</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/ont.owl#TylerDurden -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#TylerDurden">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Personagem"/>
-        <ont:apareceEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ClubeDaLuta"/>
-        <ont:interpretadoPor rdf:resource="http://www.semanticweb.org/actor-ontology#BradPitt"/>
-        <anoInterpretacao rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1999</anoInterpretacao>
-        <generoPersonagem>Ação</generoPersonagem>
-        <nomePersonagem>Tyler Durden</nomePersonagem>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#BradPitt -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#BradPitt">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Ator"/>
-        <ont:fezCarreiraEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hollywood"/>
-        <atuouEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#EraUmaVezHollywood"/>
-        <interpretouPersonagem rdf:resource="http://www.co-ode.org/ontologies/ont.owl#CliffBooth"/>
-        <interpretouPersonagem rdf:resource="http://www.co-ode.org/ontologies/ont.owl#TylerDurden"/>
-        <recebeuPremiacao rdf:resource="http://www.semanticweb.org/actor-ontology#MelhorAtorCoadjuvante"/>
-        <dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1963-12-18</dataNascimento>
-        <nacionalidade>Americano</nacionalidade>
-        <nome>Brad Pitt</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#ForrestGump -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#ForrestGump">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Filme"/>
-        <nome>Forrest Gump</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#JenniferLawrence -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#JenniferLawrence">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Ator"/>
-        <ont:fezCarreiraEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hollywood"/>
-        <atuouEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#JogosVorazes"/>
-        <interpretouPersonagem rdf:resource="http://www.co-ode.org/ontologies/ont.owl#KatnissEverdeen"/>
-        <recebeuPremiacao rdf:resource="http://www.semanticweb.org/actor-ontology#MelhorAtriz"/>
-        <dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1990-08-15</dataNascimento>
-        <nacionalidade>Americana</nacionalidade>
-        <nome>Jennifer Lawrence</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#LeonardoDiCaprio -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#LeonardoDiCaprio">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Ator"/>
-        <ont:fezCarreiraEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hollywood"/>
-        <atuouEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#EraUmaVezHollywood"/>
-        <interpretouPersonagem rdf:resource="http://www.co-ode.org/ontologies/ont.owl#RickDalton"/>
-        <recebeuPremiacao rdf:resource="http://www.semanticweb.org/actor-ontology#MelhorAtor"/>
-        <dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1974-11-11</dataNascimento>
-        <nacionalidade>Americano</nacionalidade>
-        <nome>Leonardo DiCaprio</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#MelhorAtor -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#MelhorAtor">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#CategoriaPremiacao"/>
-        <ont:academia>Oscar</ont:academia>
-        <nome>Melhor Ator</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#MelhorAtorCoadjuvante -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#MelhorAtorCoadjuvante">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#CategoriaPremiacao"/>
-        <ont:academia>Oscar</ont:academia>
-        <nome>Melhor Ator Coadjuvante</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#MelhorAtriz -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#MelhorAtriz">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#CategoriaPremiacao"/>
-        <ont:academia>Oscar</ont:academia>
-        <nome>Melhor Atriz</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#MerylStreep -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#MerylStreep">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Ator"/>
-        <ont:fezCarreiraEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hollywood"/>
-        <atuouEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ODiaboVestePrada"/>
-        <interpretouPersonagem rdf:resource="http://www.co-ode.org/ontologies/ont.owl#MirandaPriestly"/>
-        <recebeuPremiacao rdf:resource="http://www.co-ode.org/ontologies/ont.owl#MelhorAtrizCoadjuvante"/>
-        <recebeuPremiacao rdf:resource="http://www.semanticweb.org/actor-ontology#MelhorAtriz"/>
-        <dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1949-06-22</dataNascimento>
-        <nacionalidade>Americana</nacionalidade>
-        <nome>Meryl Streep</nome>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/actor-ontology#TomHanks -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/actor-ontology#TomHanks">
-        <rdf:type rdf:resource="http://www.semanticweb.org/actor-ontology#Ator"/>
-        <ont:fezCarreiraEm rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Hollywood"/>
-        <atuouEm rdf:resource="http://www.semanticweb.org/actor-ontology#ForrestGump"/>
-        <interpretouPersonagem rdf:resource="http://www.co-ode.org/ontologies/ont.owl#ForrestGump"/>
-        <recebeuPremiacao rdf:resource="http://www.semanticweb.org/actor-ontology#MelhorAtor"/>
-        <dataNascimento rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1956-07-09</dataNascimento>
-        <nacionalidade>Americano</nacionalidade>
-        <nome>Tom Hanks</nome>
-    </owl:NamedIndividual>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://example.com/ontologies/actors-ontology">
+    <Prefix name="" IRI="http://example.com/ontologies/actors-ontology"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Ator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Carreira"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CategoriaPremiacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Filme"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Personagem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#apareceEm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#atuouEm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fezCarreiraEm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#interpretadoPor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#interpretouPersonagem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#recebeuPremiacao"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#academia"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#anoLancamento"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dataNascimento"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#generoCinematografico"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nacionalidade"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nome"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeAtor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeCategoria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomeFilme"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nomePersonagem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AlluriSitaramaRaju"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bollywood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BradPitt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CentralDoBrasil"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chinawood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CliffBooth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ClubeDaLuta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dora"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EraUmaVezEmHollywood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FernandaMontenegro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ForrestGump"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Forrest_Gump"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hollywood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Jack"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JenniferLawrence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JogosVorazes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#KatnissEverdeen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LeonardoDiCaprio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MelhorAtor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MelhorAtorCoadjuvante"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MelhorAtriz"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MelhorAtrizCoadjuvante"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MelhorAtrizEmmy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MelhorFilme"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MelhorFilmeEstrangeiro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MerylStreep"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MirandaPresley"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nollywood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ODiaboVestePrada"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RRR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RamCharan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RickDalton"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Titanic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TomHanks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TylerDurden"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#Personagem"/>
+        <NamedIndividual IRI="#AlluriSitaramaRaju"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Carreira"/>
+        <NamedIndividual IRI="#Bollywood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ator"/>
+        <NamedIndividual IRI="#BradPitt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Filme"/>
+        <NamedIndividual IRI="#CentralDoBrasil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Carreira"/>
+        <NamedIndividual IRI="#Chinawood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personagem"/>
+        <NamedIndividual IRI="#CliffBooth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Filme"/>
+        <NamedIndividual IRI="#ClubeDaLuta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personagem"/>
+        <NamedIndividual IRI="#Dora"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Filme"/>
+        <NamedIndividual IRI="#EraUmaVezEmHollywood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ator"/>
+        <NamedIndividual IRI="#FernandaMontenegro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Filme"/>
+        <NamedIndividual IRI="#ForrestGump"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personagem"/>
+        <NamedIndividual IRI="#Forrest_Gump"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Carreira"/>
+        <NamedIndividual IRI="#Hollywood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personagem"/>
+        <NamedIndividual IRI="#Jack"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ator"/>
+        <NamedIndividual IRI="#JenniferLawrence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Filme"/>
+        <NamedIndividual IRI="#JogosVorazes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personagem"/>
+        <NamedIndividual IRI="#KatnissEverdeen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ator"/>
+        <NamedIndividual IRI="#LeonardoDiCaprio"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CategoriaPremiacao"/>
+        <NamedIndividual IRI="#MelhorAtor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CategoriaPremiacao"/>
+        <NamedIndividual IRI="#MelhorAtorCoadjuvante"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CategoriaPremiacao"/>
+        <NamedIndividual IRI="#MelhorAtriz"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CategoriaPremiacao"/>
+        <NamedIndividual IRI="#MelhorAtrizCoadjuvante"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CategoriaPremiacao"/>
+        <NamedIndividual IRI="#MelhorAtrizEmmy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CategoriaPremiacao"/>
+        <NamedIndividual IRI="#MelhorFilme"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CategoriaPremiacao"/>
+        <NamedIndividual IRI="#MelhorFilmeEstrangeiro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ator"/>
+        <NamedIndividual IRI="#MerylStreep"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personagem"/>
+        <NamedIndividual IRI="#MirandaPresley"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Carreira"/>
+        <NamedIndividual IRI="#Nollywood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Filme"/>
+        <NamedIndividual IRI="#ODiaboVestePrada"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Filme"/>
+        <NamedIndividual IRI="#RRR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ator"/>
+        <NamedIndividual IRI="#RamCharan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personagem"/>
+        <NamedIndividual IRI="#RickDalton"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Filme"/>
+        <NamedIndividual IRI="#Titanic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ator"/>
+        <NamedIndividual IRI="#TomHanks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Personagem"/>
+        <NamedIndividual IRI="#TylerDurden"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#apareceEm"/>
+        <NamedIndividual IRI="#AlluriSitaramaRaju"/>
+        <NamedIndividual IRI="#RRR"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretadoPor"/>
+        <NamedIndividual IRI="#AlluriSitaramaRaju"/>
+        <NamedIndividual IRI="#RamCharan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#atuouEm"/>
+        <NamedIndividual IRI="#BradPitt"/>
+        <NamedIndividual IRI="#EraUmaVezEmHollywood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fezCarreiraEm"/>
+        <NamedIndividual IRI="#BradPitt"/>
+        <NamedIndividual IRI="#Hollywood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretouPersonagem"/>
+        <NamedIndividual IRI="#BradPitt"/>
+        <NamedIndividual IRI="#CliffBooth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretouPersonagem"/>
+        <NamedIndividual IRI="#BradPitt"/>
+        <NamedIndividual IRI="#TylerDurden"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#recebeuPremiacao"/>
+        <NamedIndividual IRI="#BradPitt"/>
+        <NamedIndividual IRI="#MelhorAtorCoadjuvante"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#recebeuPremiacao"/>
+        <NamedIndividual IRI="#CentralDoBrasil"/>
+        <NamedIndividual IRI="#MelhorFilmeEstrangeiro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#apareceEm"/>
+        <NamedIndividual IRI="#CliffBooth"/>
+        <NamedIndividual IRI="#EraUmaVezEmHollywood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretadoPor"/>
+        <NamedIndividual IRI="#CliffBooth"/>
+        <NamedIndividual IRI="#BradPitt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#apareceEm"/>
+        <NamedIndividual IRI="#Dora"/>
+        <NamedIndividual IRI="#CentralDoBrasil"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretadoPor"/>
+        <NamedIndividual IRI="#Dora"/>
+        <NamedIndividual IRI="#FernandaMontenegro"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#atuouEm"/>
+        <NamedIndividual IRI="#FernandaMontenegro"/>
+        <NamedIndividual IRI="#CentralDoBrasil"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretouPersonagem"/>
+        <NamedIndividual IRI="#FernandaMontenegro"/>
+        <NamedIndividual IRI="#Dora"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#recebeuPremiacao"/>
+        <NamedIndividual IRI="#FernandaMontenegro"/>
+        <NamedIndividual IRI="#MelhorAtrizEmmy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#apareceEm"/>
+        <NamedIndividual IRI="#Forrest_Gump"/>
+        <NamedIndividual IRI="#ForrestGump"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretadoPor"/>
+        <NamedIndividual IRI="#Forrest_Gump"/>
+        <NamedIndividual IRI="#TomHanks"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#apareceEm"/>
+        <NamedIndividual IRI="#Jack"/>
+        <NamedIndividual IRI="#Titanic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretadoPor"/>
+        <NamedIndividual IRI="#Jack"/>
+        <NamedIndividual IRI="#LeonardoDiCaprio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#atuouEm"/>
+        <NamedIndividual IRI="#JenniferLawrence"/>
+        <NamedIndividual IRI="#JogosVorazes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fezCarreiraEm"/>
+        <NamedIndividual IRI="#JenniferLawrence"/>
+        <NamedIndividual IRI="#Hollywood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretouPersonagem"/>
+        <NamedIndividual IRI="#JenniferLawrence"/>
+        <NamedIndividual IRI="#KatnissEverdeen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#recebeuPremiacao"/>
+        <NamedIndividual IRI="#JenniferLawrence"/>
+        <NamedIndividual IRI="#MelhorAtriz"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#apareceEm"/>
+        <NamedIndividual IRI="#KatnissEverdeen"/>
+        <NamedIndividual IRI="#JogosVorazes"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretadoPor"/>
+        <NamedIndividual IRI="#KatnissEverdeen"/>
+        <NamedIndividual IRI="#JenniferLawrence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#atuouEm"/>
+        <NamedIndividual IRI="#LeonardoDiCaprio"/>
+        <NamedIndividual IRI="#EraUmaVezEmHollywood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#atuouEm"/>
+        <NamedIndividual IRI="#LeonardoDiCaprio"/>
+        <NamedIndividual IRI="#Titanic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretouPersonagem"/>
+        <NamedIndividual IRI="#LeonardoDiCaprio"/>
+        <NamedIndividual IRI="#Jack"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretouPersonagem"/>
+        <NamedIndividual IRI="#LeonardoDiCaprio"/>
+        <NamedIndividual IRI="#RickDalton"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#recebeuPremiacao"/>
+        <NamedIndividual IRI="#LeonardoDiCaprio"/>
+        <NamedIndividual IRI="#MelhorAtor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#atuouEm"/>
+        <NamedIndividual IRI="#MerylStreep"/>
+        <NamedIndividual IRI="#ODiaboVestePrada"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fezCarreiraEm"/>
+        <NamedIndividual IRI="#MerylStreep"/>
+        <NamedIndividual IRI="#Hollywood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretouPersonagem"/>
+        <NamedIndividual IRI="#MerylStreep"/>
+        <NamedIndividual IRI="#MirandaPresley"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#recebeuPremiacao"/>
+        <NamedIndividual IRI="#MerylStreep"/>
+        <NamedIndividual IRI="#MelhorAtorCoadjuvante"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#recebeuPremiacao"/>
+        <NamedIndividual IRI="#MerylStreep"/>
+        <NamedIndividual IRI="#MelhorAtriz"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#apareceEm"/>
+        <NamedIndividual IRI="#MirandaPresley"/>
+        <NamedIndividual IRI="#ODiaboVestePrada"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretadoPor"/>
+        <NamedIndividual IRI="#MirandaPresley"/>
+        <NamedIndividual IRI="#MerylStreep"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#atuouEm"/>
+        <NamedIndividual IRI="#RamCharan"/>
+        <NamedIndividual IRI="#RRR"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fezCarreiraEm"/>
+        <NamedIndividual IRI="#RamCharan"/>
+        <NamedIndividual IRI="#Bollywood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretouPersonagem"/>
+        <NamedIndividual IRI="#RamCharan"/>
+        <NamedIndividual IRI="#AlluriSitaramaRaju"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#apareceEm"/>
+        <NamedIndividual IRI="#RickDalton"/>
+        <NamedIndividual IRI="#EraUmaVezEmHollywood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretadoPor"/>
+        <NamedIndividual IRI="#RickDalton"/>
+        <NamedIndividual IRI="#LeonardoDiCaprio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#atuouEm"/>
+        <NamedIndividual IRI="#TomHanks"/>
+        <NamedIndividual IRI="#ForrestGump"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#fezCarreiraEm"/>
+        <NamedIndividual IRI="#TomHanks"/>
+        <NamedIndividual IRI="#Hollywood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretouPersonagem"/>
+        <NamedIndividual IRI="#TomHanks"/>
+        <NamedIndividual IRI="#Forrest_Gump"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#recebeuPremiacao"/>
+        <NamedIndividual IRI="#TomHanks"/>
+        <NamedIndividual IRI="#MelhorAtor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#apareceEm"/>
+        <NamedIndividual IRI="#TylerDurden"/>
+        <NamedIndividual IRI="#ClubeDaLuta"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#interpretadoPor"/>
+        <NamedIndividual IRI="#TylerDurden"/>
+        <NamedIndividual IRI="#BradPitt"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomePersonagem"/>
+        <NamedIndividual IRI="#AlluriSitaramaRaju"/>
+        <Literal>Alluri Sitarama Raju</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dataNascimento"/>
+        <NamedIndividual IRI="#BradPitt"/>
+        <Literal>1963-12-18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nacionalidade"/>
+        <NamedIndividual IRI="#BradPitt"/>
+        <Literal>Norte-americano</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeAtor"/>
+        <NamedIndividual IRI="#BradPitt"/>
+        <Literal>Brad Pitt</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#anoLancamento"/>
+        <NamedIndividual IRI="#CentralDoBrasil"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1998</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#generoCinematografico"/>
+        <NamedIndividual IRI="#CentralDoBrasil"/>
+        <Literal>Drama</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeFilme"/>
+        <NamedIndividual IRI="#CentralDoBrasil"/>
+        <Literal>Central do Brasil</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomePersonagem"/>
+        <NamedIndividual IRI="#CliffBooth"/>
+        <Literal>Cliff Booth</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#anoLancamento"/>
+        <NamedIndividual IRI="#ClubeDaLuta"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1999</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#generoCinematografico"/>
+        <NamedIndividual IRI="#ClubeDaLuta"/>
+        <Literal>Ação</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeFilme"/>
+        <NamedIndividual IRI="#ClubeDaLuta"/>
+        <Literal>Clube da Luta</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomePersonagem"/>
+        <NamedIndividual IRI="#Dora"/>
+        <Literal>Dora</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#anoLancamento"/>
+        <NamedIndividual IRI="#EraUmaVezEmHollywood"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2019</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#generoCinematografico"/>
+        <NamedIndividual IRI="#EraUmaVezEmHollywood"/>
+        <Literal>Comédia Dramática</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeFilme"/>
+        <NamedIndividual IRI="#EraUmaVezEmHollywood"/>
+        <Literal>Era Uma Vez em Hollywood</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dataNascimento"/>
+        <NamedIndividual IRI="#FernandaMontenegro"/>
+        <Literal>1929-10-26</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nacionalidade"/>
+        <NamedIndividual IRI="#FernandaMontenegro"/>
+        <Literal>Brasileira</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeAtor"/>
+        <NamedIndividual IRI="#FernandaMontenegro"/>
+        <Literal>Fernanda Montenegro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#anoLancamento"/>
+        <NamedIndividual IRI="#ForrestGump"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1994</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#generoCinematografico"/>
+        <NamedIndividual IRI="#ForrestGump"/>
+        <Literal>Drama</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeFilme"/>
+        <NamedIndividual IRI="#ForrestGump"/>
+        <Literal>Forrest Gump</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomePersonagem"/>
+        <NamedIndividual IRI="#Forrest_Gump"/>
+        <Literal>Forrest Gump</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomePersonagem"/>
+        <NamedIndividual IRI="#Jack"/>
+        <Literal>Jack Dawson</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dataNascimento"/>
+        <NamedIndividual IRI="#JenniferLawrence"/>
+        <Literal>1990-05-15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nacionalidade"/>
+        <NamedIndividual IRI="#JenniferLawrence"/>
+        <Literal>Norte-americana</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeAtor"/>
+        <NamedIndividual IRI="#JenniferLawrence"/>
+        <Literal>Jennifer Lawrence</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#anoLancamento"/>
+        <NamedIndividual IRI="#JogosVorazes"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2012</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#generoCinematografico"/>
+        <NamedIndividual IRI="#JogosVorazes"/>
+        <Literal>Distopia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeFilme"/>
+        <NamedIndividual IRI="#JogosVorazes"/>
+        <Literal>Jogos Vorazes</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomePersonagem"/>
+        <NamedIndividual IRI="#KatnissEverdeen"/>
+        <Literal>Katniss Everdeen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dataNascimento"/>
+        <NamedIndividual IRI="#LeonardoDiCaprio"/>
+        <Literal>1974-11-11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nacionalidade"/>
+        <NamedIndividual IRI="#LeonardoDiCaprio"/>
+        <Literal>Norte-americano</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nome"/>
+        <NamedIndividual IRI="#LeonardoDiCaprio"/>
+        <Literal>Leonardo DiCaprio</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#academia"/>
+        <NamedIndividual IRI="#MelhorAtor"/>
+        <Literal>Oscar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#academia"/>
+        <NamedIndividual IRI="#MelhorAtorCoadjuvante"/>
+        <Literal>Oscar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#academia"/>
+        <NamedIndividual IRI="#MelhorAtriz"/>
+        <Literal>Oscar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#academia"/>
+        <NamedIndividual IRI="#MelhorAtrizCoadjuvante"/>
+        <Literal>Oscar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#academia"/>
+        <NamedIndividual IRI="#MelhorAtrizEmmy"/>
+        <Literal>Emmy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#academia"/>
+        <NamedIndividual IRI="#MelhorFilme"/>
+        <Literal>Oscar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeFilme"/>
+        <NamedIndividual IRI="#MelhorFilme"/>
+        <Literal>Melhor Filme</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#academia"/>
+        <NamedIndividual IRI="#MelhorFilmeEstrangeiro"/>
+        <Literal>Globo de Ouro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeCategoria"/>
+        <NamedIndividual IRI="#MelhorFilmeEstrangeiro"/>
+        <Literal>Melhor Filme Estrangeiro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dataNascimento"/>
+        <NamedIndividual IRI="#MerylStreep"/>
+        <Literal>1949-06-22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nacionalidade"/>
+        <NamedIndividual IRI="#MerylStreep"/>
+        <Literal>Norte-americana</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nome"/>
+        <NamedIndividual IRI="#MerylStreep"/>
+        <Literal>Meryl Streep</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomePersonagem"/>
+        <NamedIndividual IRI="#MirandaPresley"/>
+        <Literal>Miranda Presley</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#anoLancamento"/>
+        <NamedIndividual IRI="#ODiaboVestePrada"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2006</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#generoCinematografico"/>
+        <NamedIndividual IRI="#ODiaboVestePrada"/>
+        <Literal>Drama</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeFilme"/>
+        <NamedIndividual IRI="#ODiaboVestePrada"/>
+        <Literal>O Diabo Veste Prada</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#anoLancamento"/>
+        <NamedIndividual IRI="#RRR"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2022</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#generoCinematografico"/>
+        <NamedIndividual IRI="#RRR"/>
+        <Literal>Ação</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeFilme"/>
+        <NamedIndividual IRI="#RRR"/>
+        <Literal>RRR (Revolta, Rebelião, Revolução)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nacionalidade"/>
+        <NamedIndividual IRI="#RamCharan"/>
+        <Literal>1985-03-27</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nacionalidade"/>
+        <NamedIndividual IRI="#RamCharan"/>
+        <Literal>Indiano</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeAtor"/>
+        <NamedIndividual IRI="#RamCharan"/>
+        <Literal>Ram Charan Teja</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomePersonagem"/>
+        <NamedIndividual IRI="#RickDalton"/>
+        <Literal>Rick Dalton</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#anoLancamento"/>
+        <NamedIndividual IRI="#Titanic"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1997</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#generoCinematografico"/>
+        <NamedIndividual IRI="#Titanic"/>
+        <Literal>Drama</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomeFilme"/>
+        <NamedIndividual IRI="#Titanic"/>
+        <Literal>Titanic</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dataNascimento"/>
+        <NamedIndividual IRI="#TomHanks"/>
+        <Literal>1956-07-09</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nacionalidade"/>
+        <NamedIndividual IRI="#TomHanks"/>
+        <Literal>Norte-americano</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nome"/>
+        <NamedIndividual IRI="#TomHanks"/>
+        <Literal>Tom Hanks</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nomePersonagem"/>
+        <NamedIndividual IRI="#TylerDurden"/>
+        <Literal>Tyler Durden</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#interpretadoPor"/>
+        <ObjectProperty IRI="#interpretouPersonagem"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#apareceEm"/>
+        <Class IRI="#Personagem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#atuouEm"/>
+        <Class IRI="#Ator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#fezCarreiraEm"/>
+        <Class IRI="#Ator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#interpretadoPor"/>
+        <Class IRI="#Personagem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#interpretouPersonagem"/>
+        <Class IRI="#Ator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#recebeuPremiacao"/>
+        <Class IRI="#Ator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#recebeuPremiacao"/>
+        <Class IRI="#Filme"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#apareceEm"/>
+        <Class IRI="#Filme"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#atuouEm"/>
+        <Class IRI="#Filme"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fezCarreiraEm"/>
+        <Class IRI="#Carreira"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#interpretadoPor"/>
+        <Class IRI="#Ator"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#recebeuPremiacao"/>
+        <Class IRI="#CategoriaPremiacao"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nomeAtor"/>
+        <DataProperty IRI="#nome"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nomeCategoria"/>
+        <DataProperty IRI="#nome"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nomeFilme"/>
+        <DataProperty IRI="#nome"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#nomePersonagem"/>
+        <DataProperty IRI="#nome"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#academia"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#anoLancamento"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#generoCinematografico"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nacionalidade"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nome"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
