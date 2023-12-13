@@ -899,14 +899,6 @@
         <ObjectProperty IRI="#interpretouPersonagem"/>
         <Class IRI="#Ator"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#recebeuPremiacao"/>
-        <Class IRI="#Ator"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#recebeuPremiacao"/>
-        <Class IRI="#Filme"/>
-    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#apareceEm"/>
         <Class IRI="#Filme"/>
